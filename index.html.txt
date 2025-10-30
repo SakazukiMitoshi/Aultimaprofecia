@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Última Profecia</title>
+
+  <style>
+    :root {
+      --bg-1: #2b1d0e;
+      --bg-2: #1a1208;
+      --paper: #f0e6d2;
+      --accent: #a67c37;
+      --panel: rgba(30, 20, 10, 0.85);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Georgia', serif;
+      background: radial-gradient(circle at center, var(--bg-1) 0%, var(--bg-2) 100%);
+      color: var(--paper);
+      margin: 0;
+      line-height: 1.6;
+      background-attachment: fixed;
+    }
+
+    header {
+      background: linear-gradient(180deg, #3e2a12 0%, #2b1d0e 100%);
+      color: #f3d9a4;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      border-bottom: 3px solid var(--accent);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 6px #000;
+      margin: 0;
+    }
+
+    /* Introdução fixa */
+    .intro {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: rgba(40, 28, 12, 0.9);
+      border: 2px solid var(--accent);
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .intro h2 {
+      color: #f5d67b;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    /* Navegação */
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav button {
+      background: #5a3b1a;
+      border: 2px solid var(--accent);
+      padding: 0.6rem 1.2rem;
+      margin: 0 0.3rem;
+      color: #f0e6d2;
+      cursor: pointer;
+      border-radius: 6px;
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+      text-shadow: 1px 1px 3px #000;
+      transition: all 0.3s ease;
+    }
+
+    nav button:hover {
+      background: #7c5220;
+      transform: translateY(-2px);
+    }
+
+    nav button[aria-selected="true"] {
+      background: #a67c37;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(255, 215, 128, 0.4);
+    }
+
+    /* Conteúdo */
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background: var(--panel);
+      border: 2px solid var(--accent);
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    }
+
+    section {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      color: #f5d67b;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    p, li {
+      color: var(--paper);
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #cbb57a;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>A Última Profecia</h1>
+    <nav role="tablist">
+      <button role="tab" aria-controls="sobre" aria-selected="true">Sobre</button>
+      <button role="tab" aria-controls="criacao" aria-selected="false">Criação</button>
+      <button role="tab" aria-controls="funcoes" aria-selected="false">Funções</button>
+      <button role="tab" aria-controls="personagens" aria-selected="false">Personagens</button>
+    </nav>
+  </header>
+
+  <div class="intro">
+    <h2>Bem-vindo ao mundo de A Última Profecia</h2>
+    <p>Um RPG de fantasia em pixel art, onde o destino dos reinos é moldado por suas escolhas.  
+    Explore ruínas antigas, descubra magias perdidas e encare o fardo da profecia.</p>
+  </div>
+
+  <main>
+    <section id="sobre" role="tabpanel" class="active">
+      <h2>🌙 Sobre o Jogo</h2>
+      <p><strong>A Última Profecia</strong> é uma jornada épica em pixel art ambientada num mundo de fantasia medieval.  
+      Você assume o papel de uma heroina ou um heroi e o seu objetivo muda conforme o personagem escolhido.</p>
+      <img src="imagens/capa.jpg" alt="Arte conceitual do jogo">
+    </section>
+
+    <section id="criacao" role="tabpanel" hidden>
+      <h2>⚒️ Processo de Criação</h2>
+      <p>O jogo está sendo desenvolvido com pixel art detalhada e trilha sonora original.  
+      Ferramentas principais: <strong>Aseprite</strong> (arte), <strong>Godot Engine</strong> (jogabilidade) e <strong>FL Studio</strong> (música).</p>
+      <img src="imagens/conceito1.jpg" alt="Conceito visual">
+    </section>
+
+    <section id="funcoes" role="tabpanel" hidden>
+      <h2>🗡️ Funções do Jogo</h2>
+      <ul>
+        <li>Exploração livre de mapas e cidades.</li>
+        <li>Sistema de combate tático com magias e habilidades únicas.</li>
+        <li>Missões com múltiplos finais baseados nas decisões do jogador.</li>
+      </ul>
+    </section>
+
+    <section id="personagens" role="tabpanel" hidden>
+      <h2>🧙 Personagens</h2>
+      <p>Conheça os heróis e vilões deste mundo:</p>
+      <ul>
+        <li><strong>Solarion</strong> – A Guardiã das estrelas.</li>
+        <li><strong>Cerberu</strong> – o Ferreiro Errante.</li>
+        <li><strong>Luarca</strong> – Assassina da meia noite.</li>
+        <li><strong>Vulni</strong> – A Sniper.</li>
+        <li><strong>Kurai</strong> – A criadora das sementes.</li>
+       <li><strong>Tharliany</strong> – A vingadora .</li>
+        <li><strong>Midori</strong> – A Dj .</li>
+         <li><strong>Doll</strong> – A Matriarca .</li>
+          <li><strong>Thellos</strong> – The Death .</li>
+            <li><strong>Noctor</strong> – O Espadachim .</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>© 2025 — Equipe de Desenvolvimento de A Última Profecia</footer>
+
+  <script>
+    const tabs = document.querySelectorAll('[role="tab"]');
+    const panels = document.querySelectorAll('[role="tabpanel"]');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+        tab.setAttribute('aria-selected', 'true');
+
+        panels.forEach(panel => {
+          panel.classList.remove('active');
+          panel.hidden = true;
+        });
+
+        const targetId = tab.getAttribute('aria-controls');
+        const targetPanel = document.getElementById(targetId);
+        targetPanel.hidden = false;
+
+        setTimeout(() => targetPanel.classList.add('active'), 10);
+      });
+    });
+  </script>
+</body>
+</html>
