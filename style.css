@@ -1,4 +1,4 @@
-/* === Estilo geral === */
+
 body {
   font-family: 'Cinzel', 'Georgia', serif;
   background: radial-gradient(circle at center, #2b1d0e 0%, #1a1208 100%);
@@ -9,7 +9,7 @@ body {
   background-attachment: fixed;
 }
 
-/* === Cabeçalho === */
+
 header {
   background: linear-gradient(180deg, #3e2a12 0%, #2b1d0e 100%);
   color: #f3d9a4;
@@ -26,7 +26,7 @@ header h1 {
   margin: 0;
 }
 
-/* === Navegação === */
+
 nav {
   margin-top: 1rem;
 }
@@ -56,7 +56,7 @@ nav button[aria-selected="true"] {
   box-shadow: 0 0 15px rgba(255, 215, 128, 0.4);
 }
 
-/* === Conteúdo principal === */
+
 main {
   padding: 2rem;
   max-width: 900px;
@@ -67,7 +67,7 @@ main {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
 
-/* === Seções === */
+
 section {
   opacity: 0;
   transform: translateY(10px);
@@ -81,7 +81,7 @@ section.active {
   transform: translateY(0);
 }
 
-/* === Títulos === */
+
 h2 {
   border-bottom: 2px solid #a67c37;
   padding-bottom: 0.5rem;
@@ -89,7 +89,7 @@ h2 {
   text-shadow: 1px 1px 3px #000;
 }
 
-/* === Links e detalhes === */
+
 a {
   color: #f5d67b;
   text-decoration: none;
@@ -107,10 +107,10 @@ img {
   margin-top: 1rem;
 }
 
-/* === Rodapé opcional === */
 footer {
   text-align: center;
   padding: 1rem;
   color: #cbb57a;
   font-size: 0.9rem;
 }
+
